@@ -1,0 +1,14 @@
+# IDE files
+.idea/
+.vscode/
+
+# Mac
+.DS_Store
+
+# env
+env/
+
+# Cache
+__pycache__/
+app/__pycache__/
+app/resources/__pycache__/
