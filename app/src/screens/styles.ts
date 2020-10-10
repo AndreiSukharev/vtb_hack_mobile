@@ -9,6 +9,12 @@ const styles = StyleSheet.create({
         margin: 5,
         // backgroundColor: "green"
     },
+    containerCenter: {
+        flex: 1,
+        margin: 5,
+        justifyContent: 'center',
+        // backgroundColor: "green"
+    },
     flex: {
         flex: 1,
         // backgroundColor: "red"

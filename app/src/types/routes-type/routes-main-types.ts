@@ -2,7 +2,7 @@ import {createMaterialBottomTabNavigator, MaterialBottomTabScreenProps} from "@r
 
 export enum EnumMainRoutes {
     main = "Main",
-    auto = "Auto",
+    car = "Car",
     photo = "Photo",
     services = "Services",
     chat = "Chat",
@@ -10,7 +10,7 @@ export enum EnumMainRoutes {
 
 type MainStackParamList = {
     Main: undefined;
-    Auto: undefined;
+    Car: undefined;
     Photo: undefined;
     Services: undefined;
     Chat: undefined;

@@ -4,11 +4,11 @@ import {EnumMainRoutes} from "../types/routes-type/routes-main-types";
 import {StyleSheet} from "react-native";
 import {theme} from "../providers/theme";
 import {MainStack} from "../types/routes-type/routes-main-types";
-import Mock from "../screens/main/Mock";
 import RoutesPost from "./RoutesPost";
 import Chat from "../screens/main/chat/Chat";
 import RoutesCreditIndex from "./RoutesCreditIndex";
 import CameraSnapshot from "../screens/main/camera/CameraSnapshot";
+import RoutesCar from "./RoutesCar";
 
 const RoutesMain: React.FC<any> = () => {
     return (
@@ -27,8 +27,8 @@ const RoutesMain: React.FC<any> = () => {
                 }}
             />
             <MainStack.Screen
-                name={EnumMainRoutes.auto}
-                component={Mock}
+                name={EnumMainRoutes.car}
+                component={RoutesCar}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="car" color={color} size={26} />
