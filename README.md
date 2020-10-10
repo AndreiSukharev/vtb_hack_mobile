@@ -38,3 +38,4 @@ npm i
 expo start
 follow the instruction in the browser to launch mobile app in expo environment
 ```
+

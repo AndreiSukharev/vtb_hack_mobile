@@ -1,6 +1,6 @@
 import React from 'react';
-import Routes from "./routes/index"
-import ProviderList from "./providers/ProviderList";
+import Routes from "./src/routes/index"
+import ProviderList from "./src/providers/ProviderList";
 import {SafeAreaProvider} from "react-native-safe-area-context";
 const App: React.FC<any> = () => {
 
