@@ -26,15 +26,15 @@ const RoutesMain: React.FC<any> = () => {
                     ),
                 }}
             />
-            {/*<MainStack.Screen*/}
-            {/*    name={EnumMainRoutes.auto}*/}
-            {/*    component={Mock}*/}
-            {/*    options={{*/}
-            {/*        tabBarIcon: ({ color }) => (*/}
-            {/*            <MaterialCommunityIcons name="car" color={color} size={26} />*/}
-            {/*        ),*/}
-            {/*    }}*/}
-            {/*/>*/}
+            <MainStack.Screen
+                name={EnumMainRoutes.auto}
+                component={Mock}
+                options={{
+                    tabBarIcon: ({ color }) => (
+                        <MaterialCommunityIcons name="car" color={color} size={26} />
+                    ),
+                }}
+            />
             <MainStack.Screen
                 name={EnumMainRoutes.photo}
                 component={CameraSnapshot}
