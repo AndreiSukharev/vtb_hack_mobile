@@ -36,7 +36,7 @@ class Car(Resource):
         gradientImage = torch.autograd.Variable(loadedImage, requires_grad=True)
         res = gradientImage.unsqueeze(0)
         output = model(res)
-        cars_conf_dict = dict(zip(classes, output.data[0].tolist()))
+        cars_conf_dict = {"probabilities": dict(zip(classes, output.data[0].tolist())) }
         return cars_conf_dict
 
     # def _to_base64(self, image):
