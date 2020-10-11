@@ -17,7 +17,7 @@ const Car: React.FC<Props> = ({ route,navigation}) => {
                 <Paragraph>Цена: {route.params.price}</Paragraph>
             </Card.Content>
             <Card.Cover source={{ uri: route.params.photo }} />
-            <Button onPress={() => navigation.navigate('Services')} >Взять в кредит</Button>
+            <Button onPress={() => navigation.navigate('Services')} >Оформить заявку на кредит</Button>
         </Card>
     )
 }

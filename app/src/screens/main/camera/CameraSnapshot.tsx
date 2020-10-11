@@ -63,7 +63,7 @@ export default function CameraSnapshot({navigation}) {
                         <Card.Cover source={{uri: photo.uri}}/>
                         <Card.Actions>
                             <Button onPress={() => navigation.navigate('Services')}>Заявка на кредит</Button>
-                            <Button onPress={() => setPhoto('')}>Перефотографирвать</Button>
+                            <Button onPress={() => setPhoto('')}>Отмена</Button>
                         </Card.Actions>
                     </Card>
                 </View>
