@@ -3,12 +3,14 @@
 ## Endpoints
 
 ### POSTS
-GET    /api/car
-POST   /api/car
+GET    /api/car-recognize -> endpoint to check that API works
+POST   /api/car-recognize
 Example for POST:
 ```
 {
-    "picture": "data:image/jpeg;base64,/9j/4AAQSk"
+    "content": "base64data"
 }
 ```
+
+python -m flask run
 

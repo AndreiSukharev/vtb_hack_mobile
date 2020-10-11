@@ -8,4 +8,7 @@ flask_restful==0.3.6
 flask-cors
 gevent
 rauth
+torch
+torchvision
+Pillow
 
