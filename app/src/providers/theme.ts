@@ -7,6 +7,6 @@ export const theme = {
     colors: {
         ...DefaultTheme.colors,
         primary: styleColors.primary,
-        accent: styleColors.primary,
+        accent: styleColors.accent,
     },
 };

@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {FlatList, TouchableWithoutFeedback} from "react-native-gesture-handler";
 import CarItem from "./CarItem";
 import {EnumCarRoutes, NavigationCarProps} from "../../../types/routes-type/routes-auto-types";
-import {getAutos} from "../../../services/vtbService";
+import {getAutos, getDaDataCarsByQuery} from "../../../services/vtbService";
 import {ICar} from "../../../types/car-type";
-import {ActivityIndicator, Text, TextInput, Searchbar} from "react-native-paper";
+import {ActivityIndicator, Text, Searchbar} from "react-native-paper";
 import {View} from "react-native";
 import {styles} from "../../styles";
 
@@ -50,11 +50,27 @@ export default class Cars extends Component<Props> {
     }
 
     async componentDidMount() {
-        const data = await getAutos();
-        if (!data) {
+        const promiseVtbAuto = getAutos();
+        const promiseDaData = getDaDataCarsByQuery('форд');
+        const promises = await Promise.all([promiseVtbAuto, promiseDaData])
+        const vtbData = promises[0];
+        const daDataCars = promises[1];
+        if (!vtbData) {
             return <View style={styles.container}><Text>VTB api is not responding</Text></View>
         }
-        const cars = this.transformToICarList(data);
+        const cars = this.transformToICarList(vtbData);
+        if (daDataCars.length > 0) {
+            const noData = 'Неизвестно';
+            const daDataCar : ICar = {
+                title: daDataCars[0].value,
+                id: 'daData1',
+                type: 'Дополнительная машина со строннего API',
+                price: noData,
+                country: noData,
+                photo: 'https://www.ford.ru/content/dam/guxeu/ru/ru_ru/vehicle-images/focus/ford-focus-ru-768x432-heroimage.png'
+            }
+            cars.push(daDataCar);
+        }
         this.setState({cars});
     }
 

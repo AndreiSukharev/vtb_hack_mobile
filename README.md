@@ -31,6 +31,7 @@ cd hack/server
 pip3 install -r requirements.txt
 export FLASK_APP=main.py
 python3 -m flask run
+nohup python3 -m flask run --host 0.0.0.0 & --run background
 ```
 ### Mobile application
 ```

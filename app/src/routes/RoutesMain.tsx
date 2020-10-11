@@ -2,7 +2,6 @@ import React from "react";
 import {MaterialCommunityIcons} from "@expo/vector-icons"
 import {EnumMainRoutes} from "../types/routes-type/routes-main-types";
 import {StyleSheet} from "react-native";
-import {theme} from "../providers/theme";
 import {MainStack} from "../types/routes-type/routes-main-types";
 import RoutesPost from "./RoutesPost";
 import Chat from "../screens/main/chat/Chat";
@@ -14,7 +13,7 @@ const RoutesMain: React.FC<any> = () => {
     return (
         <MainStack.Navigator
             initialRouteName={EnumMainRoutes.main}
-            activeColor={theme.colors.primary}
+            activeColor="white"
             barStyle={styles.tabs}
         >
             <MainStack.Screen
@@ -68,7 +67,7 @@ const RoutesMain: React.FC<any> = () => {
 
 const styles = StyleSheet.create({
     tabs: {
-        backgroundColor: "white",
+        backgroundColor: '#0B1D37',
     }
 });
 
