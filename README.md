@@ -28,8 +28,9 @@ git clone https://github.com/AndreiSukharev/vtb_hack_mobile.git hack
 ### Server
 ```
 cd hack/server
-npm i
-npm run dev
+pip3 install -r requirements.txt
+export FLASK_APP=main.py
+python3 -m flask run
 ```
 ### Mobile application
 ```
