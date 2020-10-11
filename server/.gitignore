@@ -11,6 +11,6 @@ env/
 # Cache
 __pycache__/
 app/__pycache__/
-app/resources/model
-app/resources/model_dict.pickle
+#app/resources/model
+#app/resources/model_dict.pickle
 app/resources/__pycache__/
